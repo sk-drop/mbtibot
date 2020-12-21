@@ -28,7 +28,7 @@ client.on("message", message => {
     if (args[0].match(analyst)) {
         roleID = analystsID
         coloor = 11304090
-        members = message.guild.roles.get(analystsID).members
+        members = message.guild.roles.cache.get(analystsID).members
         type = "Analyst"
         likes = "Rational, Kontrovers, Einzelgänger, ..."
         if (args[0] === "INTP"){
@@ -52,7 +52,7 @@ client.on("message", message => {
     } else if (args[0].match(sentinel)) {
         roleID = sentinelsID
         coloor = 6145477
-        members = message.guild.roles.get(sentinelsID).members
+        members = message.guild.roles.cache.get(sentinelsID).members
         type = "Sentinel"
         likes = "Kooperativ, Vorsichtig, Bodenständig, ..."
         if (args[0] === "ESTJ"){
@@ -76,7 +76,7 @@ client.on("message", message => {
     } else if (args[0].match(explorer)) {
         roleID = explorersID
         coloor = 9419369
-        members = message.guild.roles.get(explorersID).members
+        members = message.guild.roles.cache.get(explorersID).members
         type = "Explorer"
         likes = "Spontan, schnell im Denken, schnell gelangweilt, ..."
         if (args[0] === "ISTP"){
@@ -100,7 +100,7 @@ client.on("message", message => {
     } else if (args[0].match(diplomat)) {
         roleID = diplomatsID
         coloor = 15187765
-        members = message.guild.roles.get(diplomatsID).members
+        members = message.guild.roles.cache.get(diplomatsID).members
         type = "Diplomat"
         likes = "An tiefen Konversationen interessiert, Tagträumer, Kreativ, ..."
         if (args[0] === "INFJ"){
@@ -126,7 +126,7 @@ client.on("message", message => {
     member = message.member
 
     if(command === "me"){
-        message.member.roles.add(roleID).catch(console.error);
+        member.roles.cache.add(roleID).catch(console.error);
         message.channel.send({embed: {
             color: coloor,
             author: {
