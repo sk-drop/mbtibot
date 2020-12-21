@@ -34,7 +34,7 @@ client.on("message", message => {
     member = message.member
 
     if(command === "me"){
-        member.addRole(roleID).catch(console.error);
+        member.roles.add(roleID).catch(console.error);
     }
 })
 
