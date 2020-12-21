@@ -126,7 +126,7 @@ client.on("message", message => {
     member = message.member
 
     if(command === "me"){
-        member.roles.add(roleID).catch(console.error);
+        message.member.roles.add(roleID).catch(console.error);
         message.channel.send({embed: {
             color: coloor,
             author: {
