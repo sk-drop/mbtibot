@@ -33,7 +33,7 @@ client.on("message", message => {
 
     member = message.member
 
-    if(command === me){
+    if(command === "me"){
         member.addRole(roleID).catch(console.error);
     }
 })
