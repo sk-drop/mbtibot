@@ -29,7 +29,7 @@ client.on("message", message => {
         var coloor = 11304090
         var members = message.guild.roles.cache.get(analystsID).members
         var type = "Analyst"
-        var role = message.guild.roles.find(r => r.name === "Analysts");
+        var role = message.guild.roles.cache.find(r => r.name === "Analysts");
         var likes = "Rational, Kontrovers, Einzelgänger, ..."
         if (args[0] === "INTP"){
             var other = "Bill Gates, Albert Einstein, Isaac Newton, ..."
@@ -53,7 +53,7 @@ client.on("message", message => {
         var coloor = 6145477
         var members = message.guild.roles.cache.get(sentinelsID).members
         var type = "Sentinel"
-        var role = message.guild.roles.find(r => r.name === "Sentinels");
+        var role = message.guild.roles.cache.find(r => r.name === "Sentinels");
         var likes = "Kooperativ, Vorsichtig, Bodenständig, ..."
         if (args[0] === "ESTJ"){
             var other = "John Rockefeller, Frank Sinatra, Boromir, ..."
@@ -77,7 +77,7 @@ client.on("message", message => {
         var coloor = 9419369
         var members = message.guild.roles.cache.get(explorersID).members
         var type = "Explorer"
-        var role = message.guild.roles.find(r => r.name === "Explorers");
+        var role = message.guild.roles.cache.find(r => r.name === "Explorers");
         var likes = "Spontan, schnell im Denken, schnell gelangweilt, ..."
         if (args[0] === "ISTP"){
             var other = "Bear Grylls, Michael Jordan, Tom Cruise, ..."
@@ -101,7 +101,7 @@ client.on("message", message => {
         var coloor = 15187765
         var members = message.guild.roles.cache.get(diplomatsID).members
         var type = "Diplomat"
-        var role = message.guild.roles.find(r => r.name === "Diplomats");
+        var role = message.guild.roles.cache.find(r => r.name === "Diplomats");
         var likes = "An tiefen Konversationen interessiert, Tagträumer, Kreativ, ..."
         if (args[0] === "INFJ"){
             var other = "Martin Luther King, Nelson Mandela, Lady Gaga, ..."
