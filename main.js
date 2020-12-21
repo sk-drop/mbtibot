@@ -123,10 +123,8 @@ client.on("message", message => {
 
     } else message.channel.send("Typ unzulässig")
 
-    member = message.member
-
     if(command === "me"){
-        member.addRole(role).catch(console.error);
+        message.member.roles.add(role).catch(console.error);
         message.channel.send({embed: {
             color: coloor,
             author: {
